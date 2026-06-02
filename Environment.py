@@ -12,7 +12,7 @@ class Environment:
 	
 	def __init__(self):
 	
-		if platform.system() == "Windows":
+		if platform.system() in ["Windows", "Darwin"]:
 			pygame.display.init()
 			pygame.display.set_caption("pySokoban")
 			self.size = (800,600)
