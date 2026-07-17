@@ -4,13 +4,12 @@ import copy
 
 class Level:
 
-    matrix = []
-    matrix_history = []
-
     def __init__(self, set_name, level_num):
 
-        del self.matrix[:]
-        del self.matrix_history[:]
+        # Instance attributes: each Level object gets its own
+        # matrix and undo history (not shared across instances)
+        self.matrix = []
+        self.matrix_history = []
 
         # Create level
         level_path = os.path.join(
