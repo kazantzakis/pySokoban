@@ -15,12 +15,12 @@ def drawLevel(matrix_to_draw):
 
     # Load level images
     theme_dir       = Path(myEnvironment.getPath()) / 'themes' / theme
-    wall            = pygame.image.load(str(theme_dir / 'images/wall.png')).convert()
-    box             = pygame.image.load(str(theme_dir / 'images/box.png')).convert()
-    box_on_target   = pygame.image.load(str(theme_dir / 'images/box_on_target.png')).convert()
-    space           = pygame.image.load(str(theme_dir / 'images/space.png')).convert()
-    target          = pygame.image.load(str(theme_dir / 'images/target.png')).convert()
-    player          = pygame.image.load(str(theme_dir / 'images/player.png')).convert()
+    wall            = pygame.image.load(theme_dir / 'images/wall.png').convert()
+    box             = pygame.image.load(theme_dir / 'images/box.png').convert()
+    box_on_target   = pygame.image.load(theme_dir / 'images/box_on_target.png').convert()
+    space           = pygame.image.load(theme_dir / 'images/space.png').convert()
+    target          = pygame.image.load(theme_dir / 'images/target.png').convert()
+    player          = pygame.image.load(theme_dir / 'images/player.png').convert()
 
     # If horizontal or vertical resolution is not enough to fit the level images then resize images
     if myLevel.getSize()[0] > myEnvironment.size[0] // 36 or myLevel.getSize()[1] > myEnvironment.size[1] // 36:
