@@ -1,5 +1,5 @@
-import os
 import copy
+from pathlib import Path
 
 
 class Level:
@@ -11,13 +11,8 @@ class Level:
         self.matrix = []
         self.matrix_history = []
 
-        # Create level
-        level_path = os.path.join(
-            os.path.dirname(os.path.abspath(__file__)),
-            'levels',
-            set_name,
-            'level{0}'.format(level_num),
-        )
+        level_path = (Path(__file__).resolve().parent / "levels" / set_name / f"level{level_num}")
+
         with open(level_path, 'r') as f:
             for row in f.read().splitlines():
                 self.matrix.append(list(row))

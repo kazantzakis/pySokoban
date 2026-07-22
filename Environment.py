@@ -2,6 +2,7 @@ import os
 import platform
 import pygame
 import time
+from pathlib import Path
 
 class Environment:
 
@@ -75,5 +76,5 @@ class Environment:
         else:
             return "framebuffer"
 
-    def getPath(self):
-        return os.path.dirname(os.path.abspath(__file__))
+    def get_app_dir(self):
+        return Path(__file__).resolve().parent
