@@ -2,7 +2,6 @@
 # Description: A sokoban implementation using python & pyGame
 # Author: Kazantzakis Nikos <kazantzakisnikos@gmail.com>
 # Date: 2015
-# Last Modified: 31-03-2016
 
 import pygame
 import time
