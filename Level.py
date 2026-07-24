@@ -43,22 +43,12 @@ class Level:
 
 
     def getBoxes(self):
-        # Iterate all Rows
         boxes = []
-        for i in range(0, len(self.matrix)):
-            # Iterate all columns
-            for k in range(0, len(self.matrix[i]) - 1):
-                if self.matrix[i][k] == "$":
-                    boxes.append([k, i])
+        for y, row in enumerate(self.matrix):
+            for x, cell in enumerate(row):
+                if cell == "$":
+                    boxes.append([x, y])
         return boxes
 
     def getSize(self):
-        max_row_length = 0
-        # Iterate all Rows
-        for i in range(0, len(self.matrix)):
-            # Iterate all columns
-            row_length = len(self.matrix[i])
-            if row_length > max_row_length:
-                max_row_length = row_length
-        return [max_row_length, len(self.matrix)]
-
+        return [max(len(row) for row in self.matrix), len(self.matrix)]
