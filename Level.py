@@ -35,12 +35,12 @@ class Level:
             return self.matrix
 
     def getPlayerPosition(self):
-        # Iterate all Rows
-        for i in range(0, len(self.matrix)):
-            # Iterate all columns
-            for k in range(0, len(self.matrix[i]) - 1):
-                if self.matrix[i][k] == "@":
-                    return [k, i]
+        for y, row in enumerate(self.matrix):
+            for x, cell in enumerate(row):
+                if cell == "@":
+                    return x, y
+        return None
+
 
     def getBoxes(self):
         # Iterate all Rows

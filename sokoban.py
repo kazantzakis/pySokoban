@@ -59,12 +59,11 @@ def movePlayer(direction,myLevel):
 
     myLevel.addToHistory(matrix)
 
-    x = myLevel.getPlayerPosition()[0]
-    y = myLevel.getPlayerPosition()[1]
+    x, y = myLevel.getPlayerPosition()
 
     global target_found
 
-    #print boxes
+    # print boxes
     print((myLevel.getBoxes()))
 
     if direction == "L":
