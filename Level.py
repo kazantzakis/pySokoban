@@ -37,7 +37,7 @@ class Level:
     def getPlayerPosition(self):
         for y, row in enumerate(self.matrix):
             for x, cell in enumerate(row):
-                if cell == "@":
+                if cell in ("@", "+"):
                     return x, y
         return None
 

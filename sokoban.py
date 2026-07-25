@@ -1,4 +1,4 @@
-# Name: pySokoban
+#Name: pySokoban
 # Description: A sokoban implementation using python & pyGame
 # Author: Kazantzakis Nikos <kazantzakisnikos@gmail.com>
 # Date: 2015
@@ -40,7 +40,7 @@ def drawLevel(matrix_to_draw):
         player = pygame.transform.scale(player, (new_image_size,new_image_size))
 
     # Just a Dictionary (associative array in pyhton's lingua) to map images to characters used in level design
-    images = {'#': wall, ' ': space, '$': box, '.': target, '@': player, '*': box_on_target}
+    images = {'#': wall, ' ': space, '$': box, '.': target, '@': player, '*': box_on_target, '+': player}
 
     # Get image size. Images are always squares so it doesn't care if you get width or height
     box_size = wall.get_width()
@@ -358,6 +358,10 @@ def initLevel(level_set,level):
     global myLevel
     myLevel = Level(level_set,level)
 
+    x, y = myLevel.getPlayerPosition()
+
+    print(x, y)
+
     # Draw this level
     drawLevel(myLevel.getMatrix())
 
@@ -372,15 +376,15 @@ myEnvironment = Environment()
 theme = "default"
 
 # Choose a level set
-level_set = "original"
+level_set = "magic_sokoban6"
 
 # Set the start Level
-current_level = 1
+current_level = 53
 
 # Initialize Level
 initLevel(level_set,current_level)
 
-target_found = False
+#target_found = False
 
 while True:
 
