@@ -53,16 +53,15 @@ In pySokoban each "Level Set" is stored in a subdirectory inside "levels" direct
 
 ## Screenshots
 Default theme
+
 !["Screenshot of the game"](themes/default/images/screenshot.png?raw=true "Screenshot of the game")
 Soft theme
+
 !["Screenshot of the game"](themes/soft/images/screenshot.png?raw=true "Screenshot of the game")
 Ksokoban theme
+
 !["Screenshot of the game"](themes/ksokoban/images/screenshot.png?raw=true "Screenshot of the game")
 
 ## To Do
-* Refactor movePlayer() function
 * Count moves & pushes
 * Show moves & pushes in interface
-
-## Known bugs
-* When player is on goal square and the u (Undo) button is pressed and then an arrow key is pressed an unnecessary goal square is created.
