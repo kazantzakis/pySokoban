@@ -42,7 +42,7 @@ def drawLevel(matrix_to_draw):
     # Just a Dictionary (associative array in pyhton's lingua) to map images to characters used in level design
     images = {'#': wall, ' ': space, '$': box, '.': target, '@': player, '*': box_on_target, '+': player}
 
-    # Get image size. Images are always squares so it doesn't care if you get width or height
+    # Get image size. Images are always squares so it doesn't matter if you get width or height
     box_size = wall.get_width()
 
     # Iterate all Rows
@@ -145,7 +145,7 @@ theme = "default"
 level_set = "magic_sokoban6"
 
 # Set the start Level
-current_level = 53
+current_level = 1
 
 # Initialize Level
 initLevel(level_set,current_level)
